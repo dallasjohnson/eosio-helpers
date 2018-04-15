@@ -1,4 +1,3 @@
-#!/bin/bash
 
  ## Functions ====
 # Black        0;30     Dark Gray     1;30
@@ -17,7 +16,7 @@
 	printf "\n${COLOR}==> $@${NC}\n"
 }
 
-# pause command or 'q' to exit.
+# pause command To facilitate multistep commands that should pause between actions or 'q' to exit.
 function pause {
   	printf "\n\n"
  	read -n 1 c
@@ -29,5 +28,14 @@ function pause {
 #exectute and display the command
 exe() { echo "\$ $@" ; "$@" ; }
 
-#common vars
-EOSROOTPATH="$HOME/Documents/Code/Eos/eos"
+#exectute, display the command and exit the script if the command returns an error (non 0 result).
+exef() {
+  echo "\$ $@" ; "$@"
+  if [[ $? > 0 ]]; then
+    exit $?
+  fi
+}
+
+source $PWD/contract_vars
+
+WALLET_PASSWORD='PW5JS7dSR1piqdS17TaLnKGu545XuCLXBJVYPeQhimSugtZfbPhY3'
