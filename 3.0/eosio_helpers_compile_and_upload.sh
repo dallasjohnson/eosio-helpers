@@ -15,7 +15,7 @@ else
 fi
 
 color_printf "Compile the cpp and output to wast"
-exef eosiocpp -o $CONTRACT_NAME.wast $CONTRACT_NAME.cpp
+exef eosiocpp -o $CONTRACT_NAME.wast *.cpp
 
 color_printf "Set the code on the contract"
 cd ..

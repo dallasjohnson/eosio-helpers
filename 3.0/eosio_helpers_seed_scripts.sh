@@ -3,7 +3,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 if [ -f contract_vars ]; then
-    echo 'Seeded scripts "contract_vars" and "run.sh" already exist in the current directory.'
+    echo 'Seeded scripts "contract_vars" already exist in the current directory.'
     echo '... Exiting with no change ...'
     exit 1
 fi

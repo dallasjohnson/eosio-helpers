@@ -7,9 +7,7 @@ if [[ ! $WALLET_PASSWORD || ! $ACCOUNT_NAME || ! $OWNER_PRIVATE_KEY || ! $ACTIVE
   exit 1;
 fi
 
-color_printf "Unlock the default wallet: "
-
-exe cleos wallet unlock --password $WALLET_PASSWORD # password from creating a wallet using `cleos wallet create`
+source eosio_helpers_unlock_wallet.sh
 
 color_printf "Using Pre-created keys for the accounts: from 'cleos create key' (run twice)"
 

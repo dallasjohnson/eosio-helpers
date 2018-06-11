@@ -36,6 +36,6 @@ exef() {
   fi
 }
 
-source $PWD/contract_vars
+source "$PWD"/contract_vars
 
-WALLET_PASSWORD='PW5JS7dSR1piqdS17TaLnKGu545XuCLXBJVYPeQhimSugtZfbPhY3'
+WALLET_PASSWORD='PW5Jh3XaHi1rQXEUVAceMti8V388pzFhybw88KzYDBdD6jRBJuzDf'
